@@ -1,0 +1,114 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    padding: 0;
+    border: 0;    
+}
+
+.container{
+    display: inline-block;
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+.container input{
+    position: absolute;
+    opacity: 0;
+}
+.container:hover input ~ .checkmark{
+    background-color: #90A955;
+}
+.container input:checked ~ .checkmark{
+    background-color: #ECF39E;
+}
+.container input:checked ~ .checkmark:after{
+    display: block;
+}
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #4F772D;
+    border-radius: 50%;
+}
+.checkmark:after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+.container .checkmark:after{
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #ECF39E;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.form{
+    background-color: azure;
+    height: 400px;
+    width: 500px;
+    border-radius: 25px;
+    margin: 20px auto 20px auto;
+    display: block;
+    border: solid 1px black;
+    box-shadow: 0 0 40px 0 greenyellow;
+}
+.form:hover{
+    box-shadow: 0 0 80px 0 rgb(135, 213, 17);
+    transition: .2s;
+    transform: scale(1.01);
+}
+
+.row1, .row2{
+    padding: 20px;
+}
+.row1{
+    padding: 30px 20px 15px 20px;
+}
+.row2{
+    padding: 15px 20px 30px 20px;
+}
+.text{
+    display: inline-block;
+    margin: 5px 20px 5px 8px;
+}
+.text_input{
+    cursor: auto;
+    width: 70px;
+    height: 35px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgb(202, 222, 200);
+    outline: none;
+    padding: 5px 10px;
+}
+.text_input:hover{
+    background-color: rgb(97, 175, 149);
+}
+.text_input:last-child{
+    margin-bottom: 35px;
+}
+
+#submit{
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 140px;
+    margin: auto;
+    background-color: rgb(74, 157, 64);
+    outline: none;
+}
+#submit:hover{
+    background-color: #90A955;
+}
